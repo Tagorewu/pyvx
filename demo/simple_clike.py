@@ -22,6 +22,7 @@ status = vx.VerifyGraph(graph)
 
 if status == vx.SUCCESS:
     status = vx.ProcessGraph(graph)
+    print("ProcessGraph done %d. " % status)
 else:
     print("Verification failed.")
 vx.ReleaseContext(context)

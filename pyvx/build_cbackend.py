@@ -85,6 +85,7 @@ def build(name, openvx_install, default):
     ffi.set_source("pyvx.backend.%s" % name, """
         #include <VX/vx.h>
         #include <VX/vxu.h>
+        #include <VX/vx_compatibility.h>
         char *_get_FMT_REF(void) {return VX_FMT_REF;}
         char *_get_FMT_SIZE(void) {return VX_FMT_SIZE;}
         int _get_KERNEL_BASE(int vendor, int lib) {return VX_KERNEL_BASE(vendor, lib);}

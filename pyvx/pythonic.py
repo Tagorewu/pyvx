@@ -33,7 +33,7 @@ class VxObjectMeta(type):
                 if a.query is None:
                     a.query = getattr(vx, 'Query' + name)
                 if a.enum is None:
-                    a.enum = getattr(vx, name.upper() + '_ATTRIBUTE_' + n.upper())
+                    a.enum = getattr(vx, name.upper() + '_' + n.upper())
         cls = type.__new__(cls, name, bases, attrs)
         return cls
 
@@ -43,8 +43,8 @@ def _query_ref(reference, attribute, c_type, python_type=None):
     return vx.QueryReference(vx.reference(reference), attribute, c_type, python_type)
 
 class Reference(VxBase):
-    count = attribute('vx_uint32', vx.REF_ATTRIBUTE_COUNT, _query_ref)
-    type = attribute('vx_enum', vx.REF_ATTRIBUTE_TYPE, _query_ref)
+    count = attribute('vx_uint32', vx.REFERENCE_COUNT, _query_ref)
+    type = attribute('vx_enum', vx.REFERENCE_TYPE, _query_ref)
 
 class Context(Reference):
     vendor_id = attribute('vx_uint16')

@@ -56,7 +56,7 @@ enum vx_vendor_id_e {
     VX_ID_CEVA      = 0x013, /*!< \brief CEVA DSP */
     VX_ID_ITSEEZ    = 0x014, /*!< \brief Itseez, Inc. */
     VX_ID_IMAGINATION=0x015, /*!< \brief Imagination Technologies */
-    VX_ID_COGNIVUE  = 0x016, /*!< \brief CogniVue Corporation */
+    VX_ID_NXP  = 0x016, /*!< \brief CogniVue Corporation */
     VX_ID_VIDEANTIS = 0x017, /*!< \brief Videantis */
     VX_ID_SYNOPSYS  = 0x018, /*!< \brief Synopsys */
     /* Add new vendor code above this line */
